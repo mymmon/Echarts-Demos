@@ -1,16 +1,8 @@
 var myChart = echarts.init(document.getElementById('section1'));
-var myData = ['本月累计', '月度同期', '上月同期',' ','本年累计', '去年累计'];
-var option ={
-	/*legend:{
-		data:['进仓','出仓'],
-		x:'center',
-		itemGap:50,
-		textStyle:{
-			color:'#000'
-		}
-	},*/
-	//坐标系设置
-	grid: [{
+var myData = ['本月累计', '月度同期', '上月同期', ' ', '本年累计', '去年累计'];
+var option = {
+    //坐标系设置
+    grid: [{
         show: false,
         left: '2%',
         top: 60,
@@ -30,7 +22,7 @@ var option ={
         bottom: 60,
         containLabel: true,
         width: '40%',
-    }, ],
+    },],
     //x轴设置
     xAxis: [{
         type: 'value',
@@ -85,15 +77,15 @@ var option ={
                 type: 'solid',
             },
         },
-    }, ],
+    },],
     //y轴设置
     yAxis: [{
         type: 'category',
         inverse: true,
         position: 'right',
         axisLine: {
-        	show: false
-    	},
+            show: false
+        },
         axisTick: {
             show: false
         },
@@ -116,15 +108,15 @@ var option ={
         },
         axisTick: {
             show: false
-            },
+        },
         axisLabel: {
             show: true,
             textStyle: {
                 color: '#000',
                 fontSize: 12,
             },
-         },
-        data: myData.map(function(value) {
+        },
+        data: myData.map(function (value) {
             return {
                 value: value,
                 textStyle: {
@@ -151,157 +143,157 @@ var option ={
             },
         },
         data: myData,
-    }, ],
-	series: [{
+    },],
+    series: [{
         name: '进仓',
         type: 'bar',
         barGap: 20,
         barWidth: 20,
         z: 10,
-        label:{
-        	show:true,
-        	normal:{
-        		color:'#000',
-        	}
+        label: {
+            show: true,
+            normal: {
+                color: '#000',
+            }
         },
         data: [{
-        	name:'本月累计',
-        },{
-        	name:'月度同期',
-        	value:115.02,
-        	itemStyle:{
-        		normal:{
-        			color:'#0E60A2'
-        		}
-        	},
-        	label:{
-        		normal:{
-        			position:'insideLeft',
-        			color:'#fff'
-        		}
-        	}
-        },{
-        	name:'上月同期',
-        	value:79.92,
-        	itemStyle:{
-        		normal:{
-        			color:'#0E60A2'
-        		}
-        	},
-        	label:{
-        		normal:{
-        			position:'insideLeft',
-        			color:'#fff'
-        		}
-        	}
-        },{
-        	name:''
-        },{
-        	name:'本年累计',
-        },{
-        	name:'去年累计',
+            name: '本月累计',
+        }, {
+            name: '月度同期',
+            value: 115.02,
+            itemStyle: {
+                normal: {
+                    color: '#0E60A2'
+                }
+            },
+            label: {
+                normal: {
+                    position: 'insideLeft',
+                    color: '#fff'
+                }
+            }
+        }, {
+            name: '上月同期',
+            value: 79.92,
+            itemStyle: {
+                normal: {
+                    color: '#0E60A2'
+                }
+            },
+            label: {
+                normal: {
+                    position: 'insideLeft',
+                    color: '#fff'
+                }
+            }
+        }, {
+            name: ''
+        }, {
+            name: '本年累计',
+        }, {
+            name: '去年累计',
         }],
-    },{
+    }, {
         name: '进仓对比',
         type: 'bar',
-        barGap:'-100%',
+        barGap: '-100%',
         barWidth: 20,
         //silent: true,  //是否不需要触发操作
-        label:{
-        	show:true,
-        	normal:{
-        		color:'#000',
-        	}
+        label: {
+            show: true,
+            normal: {
+                color: '#000',
+            }
         },
         data: [{
-        	name:'本月累计',
-        	value:121,
-        	itemStyle:{
-        		normal:{
-        			color:'#19B5EF'
-        		}
-        	}
-        },{
-        	name:'月度同期',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#999999'
-        		}
-        	}
-        },{
-        	name:'上月同期',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#999999'
-        		}
-        	}
-        },{
-        	name:'',
-        },{
-        	name:'本年累计',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#19B5EF'
-        		}
-        	}
-        },{
-        	name:'去年累计',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#0E60A2'
-        		}
-        	}
+            name: '本月累计',
+            value: 121,
+            itemStyle: {
+                normal: {
+                    color: '#19B5EF'
+                }
+            }
+        }, {
+            name: '月度同期',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#999999'
+                }
+            }
+        }, {
+            name: '上月同期',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#999999'
+                }
+            }
+        }, {
+            name: '',
+        }, {
+            name: '本年累计',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#19B5EF'
+                }
+            }
+        }, {
+            name: '去年累计',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#0E60A2'
+                }
+            }
         }],
-    },{
+    }, {
         name: '出仓',
         type: 'bar',
-        z:8,
+        z: 8,
         barGap: 20,
         barWidth: 20,
         xAxisIndex: 2,
         yAxisIndex: 2,
         data: [{
-        	name:'本月累计',
-        },{
-        	name:'月度同期',
-        	value:115.02,
-        	itemStyle:{
-        		normal:{
-        			color:'#F985BB'
-        		}
-        	},
-        	label:{
-        		normal:{
-        			position:'insideRight',
-        			color:'#fff'
-        		}
-        	}
-        },{
-        	name:'上月同期',
-        	value:79.92,
-        	itemStyle:{
-        		normal:{
-        			color:'#ED3A52'
-        		}
-        	},
-        	label:{
-        		normal:{
-        			position:'insideRight',
-        			color:'#fff'
-        		}
-        	}
-        },{
-        	name:''
-        },{
-        	name:'本年累计',
-        },{
-        	name:'去年累计',
+            name: '本月累计',
+        }, {
+            name: '月度同期',
+            value: 115.02,
+            itemStyle: {
+                normal: {
+                    color: '#F985BB'
+                }
+            },
+            label: {
+                normal: {
+                    position: 'insideRight',
+                    color: '#fff'
+                }
+            }
+        }, {
+            name: '上月同期',
+            value: 79.92,
+            itemStyle: {
+                normal: {
+                    color: '#ED3A52'
+                }
+            },
+            label: {
+                normal: {
+                    position: 'insideRight',
+                    color: '#fff'
+                }
+            }
+        }, {
+            name: ''
+        }, {
+            name: '本年累计',
+        }, {
+            name: '去年累计',
         }],
-    },{
+    }, {
         name: '出仓对比',
         type: 'bar',
         barGap: '-100%',
@@ -309,47 +301,47 @@ var option ={
         xAxisIndex: 2,
         yAxisIndex: 2,
         data: [{
-        	name:'本月累计',
-        	value:121,
-        	itemStyle:{
-        		normal:{
-        			color:'#F985BB'
-        		}
-        	}
-        },{
-        	name:'月度同期',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#999999'
-        		}
-        	}
-        },{
-        	name:'上月同期',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#999999'
-        		}
-        	}
-        },{
-        	name:'',
-        },{
-        	name:'本年累计',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#F985BB'
-        		}
-        	}
-        },{
-        	name:'去年累计',
-        	value:221,
-        	itemStyle:{
-        		normal:{
-        			color:'#ED3A52'
-        		}
-        	}
+            name: '本月累计',
+            value: 121,
+            itemStyle: {
+                normal: {
+                    color: '#F985BB'
+                }
+            }
+        }, {
+            name: '月度同期',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#999999'
+                }
+            }
+        }, {
+            name: '上月同期',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#999999'
+                }
+            }
+        }, {
+            name: '',
+        }, {
+            name: '本年累计',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#F985BB'
+                }
+            }
+        }, {
+            name: '去年累计',
+            value: 221,
+            itemStyle: {
+                normal: {
+                    color: '#ED3A52'
+                }
+            }
         }],
     }]
 }
